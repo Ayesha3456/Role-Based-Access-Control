@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <h5 class="modal-title">{{ role.id === 0 ? 'Create Role' : 'Edit Role' }}</h5>
+  <button type="button" class="close" (click)="activeModal.close()" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <form (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="roleName">Role Name</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="roleName" 
+        [(ngModel)]="role.name" 
+        name="roleName" 
+        required />
+    </div>
+
+    <!-- Permissions Selection -->
+    <div class="form-group">
+      <label for="permissions">Select Permissions</label>
+      <select 
+        multiple 
+        class="form-control" 
+        id="permissions" 
+        [(ngModel)]="role.permissions" 
+        name="permissions">
+        <option *ngFor="let permission of availablePermissions" [value]="permission">
+          {{ permission }}
+        </option>
+      </select>
+      <small class="form-text text-muted">Use Ctrl (Cmd) to select multiple permissions.</small>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.close()">Cancel</button>
+  <button type="submit" class="btn btn-primary" (click)="save()">{{ role.id === 0 ? 'Create' : 'Save' }}</button>
+</div>

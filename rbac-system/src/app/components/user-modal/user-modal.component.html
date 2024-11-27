@@ -1,0 +1,33 @@
+<div class="modal-header">
+  <h4 class="modal-title" *ngIf="user">Edit User</h4>
+  <h4 class="modal-title" *ngIf="!user">Add User</h4>
+  <button type="button" class="close" (click)="activeModal.close()" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <form (ngSubmit)="user ? updateUser() : createUser()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required />
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select class="form-control" id="role" [(ngModel)]="selectedRoleId" name="role" required>
+        <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+      </select>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Submit Button -->
+    <div class="d-flex justify-content-end mt-3">
+      <button type="submit" class="btn btn-primary">{{ user ? 'Update' : 'Create' }} User</button>
+    </div>
+  </form>
+</div>

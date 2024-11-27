@@ -1,0 +1,12 @@
+<!-- Role selection section -->
+<div *ngIf="!selectedRole" class="vh-100 d-flex justify-content-center align-items-center">
+  <div class="text-center">
+    <h2>Select Your Role</h2>
+    <div *ngFor="let role of roles" class="mb-3">
+      <button class="btn btn-primary btn-lg" (click)="onRoleSelect(role)">{{ role }}</button>
+    </div>
+  </div>
+</div>
+
+<!-- This part will be shown after role selection and navigation to login -->
+<router-outlet></router-outlet>

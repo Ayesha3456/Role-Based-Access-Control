@@ -1,0 +1,23 @@
+.container {
+  max-width: 500px;
+}
+
+.alert-info {
+  margin-bottom: 20px;
+}
+
+.btn-group-vertical {
+  width: 100%;
+}
+
+.btn-group-vertical button {
+  width: 100%;
+}
+
+h4 {
+  margin-bottom: 15px;
+}
+
+form {
+  margin-top: 20px;
+}

@@ -1,0 +1,36 @@
+/* Container margin and spacing */
+.container {
+  margin-top: 30px;
+}
+
+/* Card styles */
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Card header */
+.card-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* Card body */
+.card-body {
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Buttons between Create User and Role */
+.d-flex button {
+  margin-right: 15px;
+}
+
+/* Responsive Table */
+.table-responsive {
+  margin-top: 15px;
+}
+
+.table th, .table td {
+  padding: 12px;
+}

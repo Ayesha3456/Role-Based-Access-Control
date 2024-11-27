@@ -1,0 +1,19 @@
+<!-- login.component.html -->
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card shadow-sm" style="max-width: 400px; width: 100%">
+    <div class="card-body">
+      <h2 class="text-center mb-4">Login</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="password" placeholder="Enter password" />
+      </div>
+      <!-- Add margin-top to the login button -->
+      <button class="btn btn-primary btn-block mt-3" (click)="login()">Login</button>
+      <div *ngIf="loginError" class="alert alert-danger mt-3">Invalid username or password. Please try again.</div>
+    </div>
+  </div>
+</div>

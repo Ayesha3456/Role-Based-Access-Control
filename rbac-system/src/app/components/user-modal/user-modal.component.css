@@ -1,0 +1,61 @@
+/* Modal Header */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  /* Close Button */
+  .modal-header .close {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Form Group Spacing */
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  /* Form Control Styling */
+  .form-control {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Error Message */
+  .alert-danger {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  
+  /* Submit Button Alignment */
+  .d-flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Button Style */
+  .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  
